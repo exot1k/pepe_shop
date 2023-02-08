@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+.page-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 30px;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+html{
+    background: linear-gradient(to bottom, white, 6%, #c6d7b9);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html,
+body,
+#pepstore,
+#pepstore>div
+ {
+    /* height: 100%; */
+    /* background: linear-gradient(to bottom, white, 6%, #c6d7b9); */
+    min-height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#pepstore {
+    padding: 30px;
+    /* background: linear-gradient(to bottom, white, 6%, #c6d7b9); */
 }
 
-.App-link {
-  color: #61dafb;
+.box-shadow {
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%) !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content-box {
+    background-color: white 1 !important;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+    padding: 1.5rem !important;
+    border-radius: var(--bs-border-radius-2xl) !important;
+    --bs-border-radius-2xl: 2rem;
 }

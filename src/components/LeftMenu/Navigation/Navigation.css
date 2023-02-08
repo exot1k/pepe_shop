@@ -1,0 +1,30 @@
+.left-menu-title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 540;
+    line-height: 1.2;
+    font-size: 1.25rem;
+    font-family: "Great Vibes", cursive;
+}
+
+.left-menu-item {
+    padding-bottom: 0.25rem !important;
+    margin-bottom: 0.5rem !important;
+    justify-content: space-between !important;
+    display: flex !important;
+    box-sizing: border-box;
+}
+
+.left-menu-item-nav {
+    /* display: flex !important; */
+    color: inherit;
+    text-decoration: inherit;
+   
+}
+
+.left-menu-item-nav-active,
+.left-menu-item-nav:hover
+ {
+    text-decoration: revert;
+    color: #558336
+}

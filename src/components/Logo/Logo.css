@@ -1,0 +1,23 @@
+.logo {
+    text-align: center;
+}
+.logo-img {
+    height: 48px;
+}
+
+.logo-nav {
+    /* display: flex !important; */
+    color: inherit;
+    text-decoration: inherit;
+    gap: 5px;
+}
+
+.logo-text {
+    color: #558336;
+    margin: 2px;
+    font-family: "Great Vibes", cursive;
+    font-size: 30px;
+    font-weight: normal;
+    position: relative;
+    bottom: 10px;
+}

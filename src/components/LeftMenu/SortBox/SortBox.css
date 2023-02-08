@@ -1,0 +1,9 @@
+.sort-box {
+    position: sticky;
+    top: 143px;
+    max-height: 500px;
+}
+
+.sort-box-sort-img{
+    width: 34px;
+}

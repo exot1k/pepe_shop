@@ -1,0 +1,21 @@
+.drop-down-img {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 10px;
+    right: 0;
+    bottom: 17px;
+}
+
+.drop-down-img:hover {
+    background: #f8fff3;
+    border-radius: 10px;
+}
+
+
+.drop-down-navigation {
+    position:relative;
+    visibility: hidden;
+}
