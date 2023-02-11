@@ -1,26 +1,23 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getProducts, getProductsByCategory } from "../redux/actions";
-import { IAppDispatch, IRootState } from "../redux/store";
+import { useSelector } from "react-redux";
+import { getProducts, getProductsByCategory, setLoader } from "../redux/actions";
+import { IRootState } from "../redux/store";
 import { IGetProductsParams, IProduct } from "../redux/types";
-
+import { useLoaderWrap } from "./loader";
 
 export function useProducts(productsParams: IGetProductsParams, category?: string) {
 
-    function _getProducts(category?: string) {
-            category !== undefined ?
-            dispatch(getProductsByCategory({ category, params: productsParams })) :
-            dispatch(getProducts(productsParams))
-    }
-
-    const dispatch = useDispatch<IAppDispatch>()
     const products: IProduct[] = useSelector((state: IRootState) => {
         return state.product.products
     })
+    const getProductsByCategoryWithLoader = useLoaderWrap<typeof getProductsByCategory>(getProductsByCategory)
+    const getProductsWithLoader = useLoaderWrap<typeof getProducts>(getProducts)
 
-    useEffect(() => {
-        _getProducts(category)
-    }, [])
+    async function _getProducts(category?: string) {
+        category !== undefined ?
+            getProductsByCategoryWithLoader({ category, params: productsParams }) :
+            getProductsWithLoader(productsParams)
+    }
 
     useEffect(() => {
         _getProducts(category)

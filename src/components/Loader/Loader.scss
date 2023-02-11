@@ -1,0 +1,22 @@
+.background {
+    z-index: 999998;
+    background: #020202;
+    opacity: 0.6;
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.loader {
+    z-index: 999999;
+    position: absolute;
+    top: 0;
+    bottom: 35%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 45%;
+    position: fixed;
+    height: 150px;
+}

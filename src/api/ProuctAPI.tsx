@@ -9,8 +9,11 @@ export const ProductAPI = {
             .then(res => res.data)
     },
     getProductsByCategory: ({ category, params }: IGetProductsByCategoryParams) => {
-        
+
         return axios.get<Array<IProduct>>(`https://fakestoreapi.com/products/category/${category}`, { params })
             .then(res => res.data)
+    },
+    getProudctById: (id: number) => {
+        return axios.get<IProduct>(`https://fakestoreapi.com/products/${id}`).then(res => res.data)
     }
 }

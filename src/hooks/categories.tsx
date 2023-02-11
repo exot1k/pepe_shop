@@ -1,16 +1,18 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getCategories } from "../redux/actions";
-import { IAppDispatch, IRootState } from "../redux/store";
+import { useSelector } from "react-redux";
+import { getCategories} from "../redux/actions";
+import { IRootState } from "../redux/store";
+import { useLoaderWrap } from "./loader";
+
 
 export function useCategories() {
-    const dispatch = useDispatch<IAppDispatch>()
     const categories = useSelector((state: IRootState) => {
         return state.categories.categories
     })
+    const getCategoriesWithLoader = useLoaderWrap<typeof getCategories>(getCategories)
 
     useEffect(() => {
-        dispatch(getCategories())
+        getCategoriesWithLoader()
     }, [])
 
     return { categories }

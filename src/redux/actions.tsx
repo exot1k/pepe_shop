@@ -6,6 +6,7 @@ import {
     GET_CATEGORIES,
     GET_PRODUCTS,
     GET_PRODUCTS_BY_CATEGORY,
+    GET_PRODUCTS_BY_ID,
     IGetProductsByCategoryParams,
     IGetProductsParams,
     INC_LOADER_COUNT
@@ -13,33 +14,41 @@ import {
 
 export const getCategories =
     createAsyncThunk(GET_CATEGORIES,
-        async (_, thunkAPI) => {
-            thunkAPI.dispatch(incLoaderCount)
+        async () => {
             const resp = categoryAPI.getCategories()
-            thunkAPI.dispatch(decLoaderCount)
             return resp
         })
 
 
 export const getProducts =
     createAsyncThunk(GET_PRODUCTS,
-        async (productsParams: IGetProductsParams, thunkAPI) => {
-            thunkAPI.dispatch(incLoaderCount)
-            const resp = ProductAPI.getProducts(productsParams)
-            thunkAPI.dispatch(decLoaderCount)
+        async (productsParams: IGetProductsParams) => {
+            const resp = await ProductAPI.getProducts(productsParams)
             return resp
 
         })
 
 export const getProductsByCategory =
     createAsyncThunk(GET_PRODUCTS_BY_CATEGORY,
-        async (productsByCategoryParams: IGetProductsByCategoryParams, thunkAPI) => {
-            thunkAPI.dispatch(incLoaderCount)
+        async (productsByCategoryParams: IGetProductsByCategoryParams) => {
             const resp = ProductAPI.getProductsByCategory(productsByCategoryParams)
-            thunkAPI.dispatch(decLoaderCount)
             return resp
 
         })
 
-const incLoaderCount = createAction(INC_LOADER_COUNT)
-const decLoaderCount = createAction(DEC_LOADER_COUNT)
+export const getProductById =
+    createAsyncThunk(
+        GET_PRODUCTS_BY_ID,
+        async (id: number) => {
+            return ProductAPI.getProudctById(id)
+        }
+    )
+
+
+export function setLoader(func_bool: boolean) {
+    const func = func_bool ? INC_LOADER_COUNT : DEC_LOADER_COUNT
+    return createAction(func)()
+}
+
+
+

@@ -14,3 +14,5 @@ const loaderReducer = createReducer(initialState, (builder) => {
         state.queryCount -= 1
     })
 })
+
+export default loaderReducer

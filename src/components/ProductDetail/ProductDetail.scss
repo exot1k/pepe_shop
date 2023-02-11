@@ -1,0 +1,179 @@
+.detail-container {
+    --gap: 24px;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    height: 100%;
+
+    .product {
+        height: 79vh;
+        width: 100%;
+        width: 85%;
+        margin: 0 auto;
+
+        .content {
+            max-width: 100%;
+            height: 95%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .firstColumn {
+                align-items: stretch;
+                box-sizing: border-box;
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                min-width: 0;
+
+                .productImage {
+                    height: 30vh;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .rate {
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 50px;
+
+                    img {
+                        width: 30px;
+                    }
+
+                }
+
+                .rateCount {
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    h3 {
+                        font-family: "Great Vibes", cursive;
+                    }
+                }
+
+                .caruselParent {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .caruselItem {
+                        width: calc(100%/3);
+                        text-align: center;
+
+                        .caruselButton {
+                            width: 50px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+            }
+
+            .secondColumn {
+                align-items: stretch;
+                box-sizing: border-box;
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                margin-bottom: var(--gap);
+                margin-left: var(--gap);
+                min-width: 0;
+                max-width: 1px;
+                flex-basis: 1px;
+            }
+
+            .thirdColumn {
+                max-width: 360px;
+                align-items: stretch;
+                box-sizing: border-box;
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                margin-bottom: var(--gap);
+                margin-left: var(--gap);
+                margin-right: var(--gap);
+                min-width: 0;
+                flex-basis: 360px;
+
+                .title {
+                    margin: 0;
+                    font-family: "Great Vibes", cursive;
+                    font-size: 30px;
+                    font-weight: bold;
+                    position: relative;
+                    bottom: 10px;
+                }
+
+                .desc {
+                    font-family: "Great Vibes", cursive;
+                }
+
+                .price {
+                    font-family: "Great Vibes", cursive;
+                    font-size: 45px;
+                    font-weight: bold;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 0px;
+                    margin-bottom: 10px;
+                }
+
+
+
+
+                .addToCartBTN {
+                    background-color: #c6d7b9;
+                    border-radius: 100px;
+
+                    box-shadow:
+                        rgba(172, 236, 187, 0.2) 0 -25px 18px -14px inset,
+                        rgba(172, 236, 187, .15) 0 1px 2px,
+                        rgba(172, 236, 187, .15) 0 2px 4px,
+                        rgba(172, 236, 187, .15) 0 4px 8px,
+                        rgba(172, 236, 187, .15) 0 8px 16px,
+                        rgba(172, 236, 187, .15) 0 16px 32px;
+                    color: green;
+                    cursor: pointer;
+                    display: inline-block;
+                    font-family: "Great Vibes", cursive;
+                    padding: 7px 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    transition: all 250ms;
+                    border: 0;
+                    font-size: 16px;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    touch-action: manipulation;
+                }
+
+                .addToCartBTN:hover {
+
+                    box-shadow:
+                        rgba(44, 187, 99, .35) 0 -25px 18px -14px inset,
+                        rgba(44, 187, 99, .25) 0 1px 2px,
+                        rgba(44, 187, 99, .25) 0 2px 4px,
+                        rgba(44, 187, 99, .25) 0 4px 8px,
+                        rgba(44, 187, 99, .25) 0 8px 16px,
+                        rgba(44, 187, 99, .25) 0 16px 32px;
+                    transform: scale(1.05) rotate(-1deg);
+                }
+
+
+            }
+
+        }
+    }
+
+    .backButton {
+        width: 40px;
+        cursor: pointer;
+    }
+
+}

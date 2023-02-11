@@ -1,27 +1,26 @@
 .page-content {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 30px;
-  
+    padding: 30px;
+
 }
 
 
-html{
+html {
     background: linear-gradient(to bottom, white, 6%, #c6d7b9);
 }
 
 html,
 body,
 #pepstore,
-#pepstore>div
- {
+#pepstore>div {
     /* height: 100%; */
     /* background: linear-gradient(to bottom, white, 6%, #c6d7b9); */
     min-height: 100%;
 }
 
 #pepstore {
-    padding: 30px;
+    /* padding: 30px; */
     /* background: linear-gradient(to bottom, white, 6%, #c6d7b9); */
 }
 

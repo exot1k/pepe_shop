@@ -5,6 +5,7 @@ import './Navigation.css'
 export function Navigation() {
     let { categories: menu_items } = useCategories()
     let params = useParams();
+    if (!menu_items.length) return null;
     return <div className="left-menu box-shadow content-box">
         <h5 className='left-menu-title'>Категории</h5>
         {menu_items.map((i, index) => {

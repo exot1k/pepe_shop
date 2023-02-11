@@ -7,8 +7,6 @@ interface ILayout {
 }
 
 export function MainPage(props: ILayout) {
-
-
     return (
         <div className="main-page-row">
             <div className="main-page-left-menu">

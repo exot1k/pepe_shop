@@ -1,12 +1,11 @@
 import { NavLink } from "react-router-dom";
-import productReducer from "../../../redux/reducers/productReducer";
 import { IProduct } from "../../../redux/types";
-import './Product.scss'
+import './ProductCard.scss'
 interface IProudctProprs {
     product: IProduct
 }
-export function Product({ product }: IProudctProprs) {
-    console.log(product.id)
+export function ProductCard({ product }: IProudctProprs) {
+ 
     return (
         <>
             <div className="proudct">
